@@ -37,7 +37,21 @@ download_release() {
   version="$1"
   filename="$2"
 
-  url="$GH_REPO/releases/download/v${version}/exa-linux-x86_64-v${version}.zip"
+  local platform
+  case "$OSTYPE" in
+    darwin*) platform="macos" ;;
+    linux*) platform="linux" ;;
+    *) fail "Unsupported platform" ;;
+  esac
+
+  local architecture
+  case "$(uname -m)" in
+    x86_64) architecture="x86_64" ;;
+    arm64) architecture="armv7" ;;
+    *) fail "Unsupported architecture" ;;
+  esac
+
+  url="$GH_REPO/releases/download/v${version}/exa-${platform}-${architecture}-v${version}.zip"
 
   echo "* Downloading $TOOL_NAME release $version..."
   curl "${curl_opts[@]}" -o "$filename" -C - "$url" || fail "Could not download $url"
