@@ -22,6 +22,8 @@
 Plugin:
 
 ```shell
+asdf plugin add exa
+# or
 asdf plugin add exa https://github.com/nyrst/asdf-exa.git
 ```
 
