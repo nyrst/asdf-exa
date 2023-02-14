@@ -51,6 +51,13 @@ download_release() {
     *) fail "Unsupported architecture" ;;
   esac
 
+  # Per issue #1, there is not currently a macos/Apple Silicon build of exa, so
+  # we overwrite the architecture
+  if [ $platform = "macos" -a $architecture = "armv7" ]; then
+    echo "Exa does not have Apple Silicon releases yet. See https://github.com/nyrst/asdf-exa/issues/1"
+    architecture="x86_64"
+  fi
+
   url="$GH_REPO/releases/download/v${version}/exa-${platform}-${architecture}-v${version}.zip"
 
   echo "* Downloading $TOOL_NAME release $version..."
