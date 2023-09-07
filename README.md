@@ -1,8 +1,8 @@
 <div align="center">
 
-# asdf-exa ![Build](https://github.com/nyrst/asdf-exa/workflows/Build/badge.svg) ![Lint](https://github.com/nyrst/asdf-exa/workflows/Lint/badge.svg)
+# asdf-eza ![Build](https://github.com/jc00ke/asdf-eza/workflows/Build/badge.svg) ![Lint](https://github.com/jc00ke/asdf-eza/workflows/Lint/badge.svg)
 
-[exa](https://the.exa.website/) plugin for the [asdf version manager](https://asdf-vm.com).
+[eza](https://github.com/eza-community/eza) plugin for the [asdf version manager](https://asdf-vm.com).
 
 </div>
 
@@ -22,25 +22,25 @@
 Plugin:
 
 ```shell
-asdf plugin add exa
+asdf plugin add eza
 # or
-asdf plugin add exa https://github.com/nyrst/asdf-exa.git
+asdf plugin add eza https://github.com/jc00ke/asdf-eza.git
 ```
 
-exa:
+eza:
 
 ```shell
 # Show all installable versions
-asdf list-all exa
+asdf list-all eza
 
 # Install specific version
-asdf install exa latest
+asdf install eza latest
 
 # Set a version globally (on your ~/.tool-versions file)
-asdf global exa latest
+asdf global eza latest
 
-# Now exa commands are available
-exa --version
+# Now eza commands are available
+eza --version
 ```
 
 Check [asdf](https://github.com/asdf-vm/asdf) readme for more instructions on how to
@@ -50,7 +50,7 @@ install & manage versions.
 
 Contributions of any kind welcome! See the [contributing guide](contributing.md).
 
-[Thanks goes to these contributors](https://github.com/nyrst/asdf-exa/graphs/contributors)!
+[Thanks goes to these contributors](https://github.com/jc00ke/asdf-eza/graphs/contributors)!
 
 # License
 

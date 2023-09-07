@@ -2,9 +2,9 @@
 
 set -euo pipefail
 
-GH_REPO="https://github.com/ogham/exa"
-TOOL_NAME="exa"
-TOOL_TEST="exa --version"
+GH_REPO="https://github.com/eza-community/eza"
+TOOL_NAME="eza"
+TOOL_TEST="eza --version"
 
 fail() {
   echo -e "asdf-$TOOL_NAME: $*"
@@ -51,7 +51,7 @@ download_release() {
     *) fail "Unsupported architecture" ;;
   esac
 
-  url="$GH_REPO/releases/download/v${version}/exa-${platform}-${architecture}-v${version}.zip"
+  url="$GH_REPO/releases/download/v${version}/eza-${platform}-${architecture}-v${version}.zip"
 
   echo "* Downloading $TOOL_NAME release $version..."
   curl "${curl_opts[@]}" -o "$filename" -C - "$url" || fail "Could not download $url"
