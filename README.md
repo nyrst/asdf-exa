@@ -1,3 +1,5 @@
+⚠️ [Exa](https://github.com/ogham/exa) => [Eza](https://github.com/eza-community/eza). Use https://github.com/lwiechec/asdf-eza instead.
+
 <div align="center">
 
 # asdf-exa ![Build](https://github.com/nyrst/asdf-exa/workflows/Build/badge.svg) ![Lint](https://github.com/nyrst/asdf-exa/workflows/Lint/badge.svg)
